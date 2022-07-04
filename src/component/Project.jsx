@@ -62,7 +62,7 @@ function Project(props) {
             />
             <Pitem
               image={require("../assets/movie-app.png")}
-              title="Audiophile"
+              title="Ney-Movies"
               details=" A movie website using the movie database api"
               stack="React js || Tailwind "
               link="https://ney-movies.vercel.app"
