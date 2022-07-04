@@ -21,7 +21,7 @@ function stack() {
         name="skills"
         className="pt-8 md:pt-16 lg:pt-32 flex justify-center items-center text-white "
       >
-        <div className="max-w-[1000px] mx-auto py-16 md:py-4 pl-40 flex flex-col justify-center w-full h-full">
+        <div className="max-w-[1000px] mx-auto py-16 md:py-4 sm:pl-40 pl-12 pr-2 flex flex-col justify-center w-full h-full">
           <div className="mb-[20px] text-center">
             <p className="inline-block  self-center border-b-2 text-black border-black">
               These are technologies I've worked with
