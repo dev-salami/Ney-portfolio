@@ -60,6 +60,13 @@ function Project(props) {
               stack="React js || Tailwind || React Reveal"
               link="https://audiophile-ney.vercel.app"
             />
+            <Pitem
+              image={require("../assets/movie-app.png")}
+              title="Audiophile"
+              details=" A movie website using the movie database api"
+              stack="React js || Tailwind "
+              link="https://ney-movies.vercel.app"
+            />
           </div>
           <MdChevronRight
             onClick={slideRight}
