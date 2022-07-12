@@ -46,11 +46,18 @@ function Project(props) {
               link="https://froshgraphics.netlify.app"
             />
             <Pitem
-              image={require("../assets/snap-landing-page.png")}
-              title="Snap Limited"
-              details="Landing page for a company"
-              stack="Html || Tailwind || javascript"
-              link="https://snap-ney.netlify.app"
+              image={require("../assets/news.png")}
+              title="News App"
+              details="News App using a news api"
+              stack="React || Tailwind || Axios"
+              link="https://ney-news.vercel.app"
+            />
+            <Pitem
+              image={require("../assets/furniture.png")}
+              title="Furniture Store"
+              details=" A Website for a furniture store"
+              stack="React || Tailwind"
+              link="https://ney-furniture.vercel.app"
             />
             {/* nfm */}
             <Pitem
