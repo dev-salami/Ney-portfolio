@@ -1,9 +1,11 @@
-import { motion } from "framer-motion";
 import Pitem from "./pitem";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
+import DataContext from "../context/DataContext";
+import { useContext } from "react";
 
 import Shared from "./shared";
-function Project(props) {
+function Project() {
+  const { Light } = useContext(DataContext);
   const slideLeft = () => {
     const slider = document.getElementById("slider");
     slider.scrollLeft = slider.scrollLeft - 300;
@@ -14,13 +16,15 @@ function Project(props) {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0, transition: { duration: 4 } }}
-    >
+    <div>
       <Shared />
-      <div className="bg-[#fbdede] text-white h-[100vh] w-[100vw]">
+      <div
+        className={
+          !Light
+            ? "bg-[#fbdede] h-[100vh] w-[100vw] all text-black"
+            : "bg-[#0a192f] h-[100vh] w-[100vw] all text-white"
+        }
+      >
         <div className="flex items-center mx-8 sm:mx-6 sm:px-20 space-x-2">
           <MdChevronLeft
             onClick={slideLeft}
@@ -82,7 +86,7 @@ function Project(props) {
           />
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 export default Project;

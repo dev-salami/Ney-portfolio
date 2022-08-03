@@ -1,16 +1,17 @@
 import { RotateCircleLoading } from "react-loadingg";
 import img from "../assets/bg.png";
-import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { BsTwitter } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { useState } from "react";
-
+import { useContext } from "react";
+import DataContext from "../context/DataContext";
+import { Link } from "react-router-dom";
 function Home() {
+  const { Light, setLight } = useContext(DataContext);
   const [Show, setShow] = useState(false);
-  const [Light, setLight] = useState(false);
-  // const hide = () => setShow(false);
-  // const handleClick = () => setShow(!Show);
+
   const handleClick = function () {
     setShow(!Show);
   };
@@ -19,24 +20,18 @@ function Home() {
   };
   const light = function () {
     setLight(!Light);
-    console.log(Light);
-  };
-  const dark = function () {
-    setLight(!Light);
-    console.log(Light);
   };
 
   return (
-    <motion.section
-      // className="bg-[#fbdede] h-[100vh] w-[100vw] all text-black"
+    <section
       className={
         !Light
           ? "bg-[#fbdede] h-[100vh] w-[100vw] all text-black"
           : "bg-[#0a192f] h-[100vh] w-[100vw] all text-white"
       }
-      initial={{ y: -1500 }}
-      animate={{ y: 0 }}
-      exit={{ y: -1500, transition: { duration: 4 } }}
+      // initial={{ y: -1000 }}
+      // animate={{ opacity: 1, y: 0 }}
+      // exit={{ y: 1000, transition: { duration: 2 } }}
     >
       <div className="max-w-[95vw] mx-auto max-h-[95vh] py-4 ">
         <div className="flex flex-row justify-between items-center">
@@ -60,12 +55,7 @@ function Home() {
             animate={{ y: 0 }}
             transition={{ duration: 2, delay: 2 }}
           >
-            <a href="./">
-              {/* <img
-                className="h-[20px] lg:h-[40px] md:h-[30px]  "
-                src={hom}
-                alt="home"
-              /> */}
+            <Link to="./">
               <svg
                 className="h-[20px] lg:h-[40px] md:h-[30px]  "
                 xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +79,7 @@ function Home() {
                   d="M27.5,35.5c-0.3,0-0.5,0.2-0.5,0.5v2c0,0.3,0.2,0.5,0.5,0.5S28,38.3,28,38v-2C28,35.7,27.8,35.5,27.5,35.5z"
                 />
               </svg>
-            </a>
+            </Link>
           </motion.span>
           <motion.span
             initial={{ y: -100 }}
@@ -121,7 +111,7 @@ function Home() {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 strokeWidth="2"
-                onClick={dark}
+                onClick={light}
               >
                 <path
                   strokeLinecap="round"
@@ -136,8 +126,9 @@ function Home() {
             animate={{ y: 0 }}
             transition={{ duration: 2, delay: 2.5 }}
             href="mailto:salamikhalil02@gmail.com"
-            target="_blank"
             className="font-medium"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Say Hi to me
           </motion.a>
@@ -181,10 +172,10 @@ function Home() {
           className="absolute lg:space-x-96 md:space-x-64 space-x-32 bottom-4 font-medium text-xl flex left-1/2 transform -translate-x-1/2"
         >
           <span>
-            <a href="/about">About</a>
+            <Link to="/about">About</Link>
           </span>
           <span>
-            <a href="/stack">Stacks</a>
+            <Link to="/stack">Stacks</Link>
           </span>
         </motion.div>
         <motion.div
@@ -193,9 +184,9 @@ function Home() {
           transition={{ duration: 2, delay: 1 }}
           className="absolute right-1 top-[45%] transform -translate-y-1/2 -rotate-90"
         >
-          <a href="/project" className=" font-medium text-xl">
+          <Link to="/project" className=" font-medium text-xl">
             Projects
-          </a>
+          </Link>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -206,6 +197,8 @@ function Home() {
           <ul>
             <li className="w-[160px] h-[40px] px-2 pl-6 flex justify-between items-center ml-[-125px] sm:hover:ml-[-10px] duration-300 bg-blue-600">
               <a
+                target="_blank"
+                rel="noreferrer"
                 className="flex justify-between items-center w-full text-gray-300"
                 href="https://www.linkedin.com/in/khalil-adedamola-b99a09237/"
               >
@@ -214,6 +207,8 @@ function Home() {
             </li>
             <li className="w-[160px] h-[40px] px-2 pl-6 flex justify-between items-center ml-[-125px] sm:hover:ml-[-10px] duration-300 bg-[#333333]">
               <a
+                target="_blank"
+                rel="noreferrer"
                 className="flex justify-between items-center w-full text-gray-300"
                 href="https://github.com/Skhalil772"
               >
@@ -222,14 +217,18 @@ function Home() {
             </li>
             <li className="w-[160px] h-[40px] px-2 pl-6 flex justify-between items-center ml-[-125px] sm:hover:ml-[-10px] duration-300 bg-[#EA4335]">
               <a
+                target="_blank"
+                rel="noreferrer"
                 className="flex justify-between items-center w-full text-gray-300"
-                href="/"
+                href="mailto:salamikhalil02@gmail.com"
               >
                 Email <SiGmail size={20} />
               </a>
             </li>
             <li className="w-[160px] h-[40px] px-2 pl-6 flex justify-between items-center ml-[-125px] sm:hover:ml-[-10px] duration-300 bg-[#1DA1F2]">
               <a
+                target="_blank"
+                rel="noreferrer"
                 className="flex justify-between items-center w-full text-gray-300"
                 href="https://twitter.com/Harhdeyhdarhmo1"
               >
@@ -239,7 +238,7 @@ function Home() {
           </ul>
         </motion.div>
       </div>
-    </motion.section>
+    </section>
   );
 }
 export default Home;

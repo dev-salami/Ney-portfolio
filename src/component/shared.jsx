@@ -1,17 +1,25 @@
 import img from "../assets/bg.png";
 
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { useContext } from "react";
+import DataContext from "../context/DataContext";
 import { SiGmail } from "react-icons/si";
 import { BsTwitter } from "react-icons/bs";
 import { motion } from "framer-motion";
-function shared() {
+import { Link } from "react-router-dom";
+function Shared() {
+  const { Light } = useContext(DataContext);
   return (
-    <div>
+    <div
+      className={
+        !Light ? "bg-[#fbdede]  text-black" : "bg-[#0a192f]  text-white"
+      }
+    >
       <div className="absolute items-center top-4 left-6 flex flex-row lg:space-x-80 md:space-x-60 space-x-28 ">
         <motion.div
-          initial={{ y: -100 }}
-          animate={{ y: 0 }}
-          transition={{ duration: 4 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ type: "tween", duration: 2, delay: 0 }}
           className="flex flex-col md:flex-row md:space-x-2 "
         >
           <span className="new  text-xl sm:text-2xl md:3xl self-center font-bold ">
@@ -24,12 +32,7 @@ function shared() {
           />
         </motion.div>
         <span>
-          <a href="./">
-            {/* <img
-              className="h-[20px] lg:h-[40px] md:h-[30px]  "
-              src={hom}
-              alt="home"
-            /> */}
+          <Link to="/">
             <svg
               className="h-[20px] lg:h-[40px] md:h-[30px]  "
               xmlns="http://www.w3.org/2000/svg"
@@ -50,18 +53,20 @@ function shared() {
                 d="M27.5,35.5c-0.3,0-0.5,0.2-0.5,0.5v2c0,0.3,0.2,0.5,0.5,0.5S28,38.3,28,38v-2C28,35.7,27.8,35.5,27.5,35.5z"
               />
             </svg>
-          </a>
+          </Link>
         </span>
       </div>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ type: "tween", duration: 2, delay: 3 }}
+        transition={{ type: "tween", duration: 2, delay: 1 }}
         className="flex fixed flex-col top-[35%] left-0"
       >
         <ul>
           <li className="w-[160px] h-[40px] px-2 pl-6 flex justify-between items-center ml-[-125px] sm:hover:ml-[-10px] duration-300 bg-blue-600">
             <a
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex justify-between items-center w-full text-gray-300"
               href="https://www.linkedin.com/in/khalil-adedamola-b99a09237/"
             >
@@ -70,6 +75,8 @@ function shared() {
           </li>
           <li className="w-[160px] h-[40px] px-2 pl-6 flex justify-between items-center ml-[-125px] sm:hover:ml-[-10px] duration-300 bg-[#333333]">
             <a
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex justify-between items-center w-full text-gray-300"
               href="https://github.com/Skhalil772"
             >
@@ -78,6 +85,8 @@ function shared() {
           </li>
           <li className="w-[160px] h-[40px] px-2 pl-6 flex justify-between items-center ml-[-125px] sm:hover:ml-[-10px] duration-300 bg-[#EA4335]">
             <a
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex justify-between items-center w-full text-gray-300"
               href="mailto:salamikhalil02@gmail.com"
             >
@@ -86,6 +95,8 @@ function shared() {
           </li>
           <li className="w-[160px] h-[40px] px-2 pl-6 flex justify-between items-center ml-[-125px] sm:hover:ml-[-10px] duration-300 bg-[#1DA1F2]">
             <a
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex justify-between items-center w-full text-gray-300"
               href="https://twitter.com/Harhdeyhdarhmo1"
             >
@@ -97,4 +108,4 @@ function shared() {
     </div>
   );
 }
-export default shared;
+export default Shared;

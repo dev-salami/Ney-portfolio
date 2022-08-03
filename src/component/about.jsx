@@ -1,5 +1,8 @@
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Shared from "./shared";
+import DataContext from "../context/DataContext";
+import { useContext } from "react";
+
 // function about() {
 //   return (
 //     <motion.div
@@ -16,8 +19,20 @@ import Shared from "./shared";
 import React from "react";
 
 const About = () => {
+  const { Light } = useContext(DataContext);
+
   return (
-    <div name="about" className="w-full h-screen bg-[#fbdede] text-black">
+    <motion.div
+      // initial={{ opacity: 0 }}
+      // animate={{ opacity: 1 }}
+      // exit={{ opacity: 0, transition: { duration: 2 } }}
+      name="about"
+      className={
+        !Light
+          ? "bg-[#fbdede] w-full h-screen text-black"
+          : "bg-[#0a192f] w-full h-screen text-white"
+      }
+    >
       <Shared />
       <div className="flex flex-col justify-center items-center w-full h-full container mx-auto lg:px-0 px-8">
         <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
@@ -42,7 +57,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

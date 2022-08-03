@@ -8,13 +8,22 @@ import javascript from "../assets/javascript.png";
 import react from "../assets/react.png";
 import github from "../assets/github.png";
 import firebase from "../assets/firebase.png";
-function stack() {
+import { useContext } from "react";
+
+import DataContext from "../context/DataContext";
+
+function Stack() {
+  const { Light } = useContext(DataContext);
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0, transition: { duration: 4 } }}
-      className=" w-full  h-fit md:h-screen bg-[#fbdede] "
+      // initial={{ opacity: 0 }}
+      // animate={{ opacity: 1 }}
+      // exit={{ opacity: 0, transition: { duration: 2 } }}
+      className={
+        !Light
+          ? "bg-[#fbdede] w-full  h-fit md:h-screen text-black"
+          : "bg-[#0a192f] w-full  h-fit md:h-screen text-white"
+      }
     >
       <Shared />
       <div
@@ -23,7 +32,13 @@ function stack() {
       >
         <div className="max-w-[1000px] mx-auto py-16 md:py-4 sm:pl-40 pl-12 pr-2 flex flex-col justify-center w-full h-full">
           <div className="mb-[20px] text-center">
-            <p className="inline-block  self-center border-b-2 text-black border-black">
+            <p
+              className={
+                !Light
+                  ? "inline-block  self-center border-b-2 text-black border-black"
+                  : "inline-block  self-center border-b-2 text-white border-white"
+              }
+            >
               These are technologies I've worked with
             </p>
           </div>
@@ -78,7 +93,7 @@ function stack() {
     </motion.div>
   );
 }
-export default stack;
+export default Stack;
 
 // function Skills() {
 //   return (
