@@ -3,19 +3,6 @@ import Shared from "./shared";
 import DataContext from "../context/DataContext";
 import { useContext } from "react";
 
-// function about() {
-//   return (
-//     <motion.div
-//       initial={{ opacity: 0 }}
-//       animate={{ opacity: 1 }}
-//       exit={{ opacity: 0, transition: { duration: 4 } }}
-//     >
-//       <Shared />
-//       <div className="bg-red-200 h-[100vh] w-[100vw]">about</div>
-//     </motion.div>
-//   );
-// }
-// export default about;
 import React from "react";
 
 const About = () => {
@@ -23,9 +10,6 @@ const About = () => {
 
   return (
     <motion.div
-      // initial={{ opacity: 0 }}
-      // animate={{ opacity: 1 }}
-      // exit={{ opacity: 0, transition: { duration: 2 } }}
       name="about"
       className={
         !Light

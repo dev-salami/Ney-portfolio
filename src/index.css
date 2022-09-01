@@ -23,6 +23,33 @@ code {
   transition-timing-function: ease;
   transition-delay: 0s;
 }
+.card {
+  perspective: 1500px;
+  -moz-perspective: 1500px;
+  position: relative;
+}
+
+.card-side {
+  transition: all 2s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+}
+.back {
+  /* background-color: cadetblue; */
+  transform: rotateY(180deg);
+}
+/* .front {
+  background-color: rgb(13, 58, 59);
+} */
+.card:hover .front {
+  transform: rotateY(-180deg);
+}
+.card:hover .back {
+  transform: rotateY(0deg);
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
