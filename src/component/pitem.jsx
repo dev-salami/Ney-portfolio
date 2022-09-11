@@ -52,7 +52,7 @@ function Pitem(props) {
         </div>
       </div>
       <div>
-        <div className="flex sm:hidden flex-col space-y-6 font-semibold justify-around h-fit w-[300px] bg-gray-600 rounded-md p-4 ">
+        <div className="flex shadow-md shadow-gray-100 sm:hidden flex-col space-y-6 font-semibold justify-around h-fit w-[300px] bg-gray-600 rounded-md p-4 ">
           <img className="w-fit " src={props.image} alt="" />
           <h2>{props.title}</h2>
           <p>{props.details}</p>

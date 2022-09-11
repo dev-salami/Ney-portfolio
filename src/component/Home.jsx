@@ -57,7 +57,7 @@ function Home() {
           >
             <Link to="./">
               <svg
-                className="h-[20px] lg:h-[40px] md:h-[30px]  "
+                className=" lg:h-[40px] md:h-[30px]  "
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 48 48"
                 width="40px"

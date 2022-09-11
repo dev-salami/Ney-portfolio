@@ -5,14 +5,6 @@ import { useContext } from "react";
 import Shared from "./shared";
 function Project() {
   const { Light } = useContext(DataContext);
-  // const slideLeft = () => {
-  //   const slider = document.getElementById("slider");
-  //   slider.scrollLeft = slider.scrollLeft - 300;
-  // };
-  // const slideRight = () => {
-  //   const slider = document.getElementById("slider");
-  //   slider.scrollLeft = slider.scrollLeft + 300;
-  // };
 
   return (
     <div className="h-fit">
@@ -25,7 +17,7 @@ function Project() {
         }
       >
         <div className="container mx-auto flex justify-center pb-20">
-          <div className="lg:grid-cols-2 grid-cols-1 grid gap-4 w-fit  items-center text ">
+          <div className="lg:grid-cols-2 grid-cols-1 grid lg:gap-4 gap-16 w-fit  items-center text ">
             <Pitem
               image={require("../assets/planet.png")}
               title="Planet Facts"
