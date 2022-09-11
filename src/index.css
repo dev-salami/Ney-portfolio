@@ -53,3 +53,6 @@ code {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.text {
+  font-family: Oxanium, sans-serif;
+}
