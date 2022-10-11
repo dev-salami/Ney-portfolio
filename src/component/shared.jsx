@@ -68,7 +68,7 @@ function Shared() {
               target="_blank"
               rel="noopener noreferrer"
               className="flex justify-between items-center w-full text-gray-300"
-              href="https://www.linkedin.com/in/khalil-adedamola-b99a09237/"
+              href="https://www.linkedin.com/in/khalil-salami/"
             >
               Linkedin <FaLinkedin size={20} />
             </a>

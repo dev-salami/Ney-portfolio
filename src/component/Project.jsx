@@ -32,13 +32,13 @@ function Project() {
               stack="React js || Tailwind || AOS"
               link="https://crappo-ney.vercel.app"
             />
-            <Pitem
+            {/* <Pitem
               image={require("../assets/farm.png")}
               title="WH Farms"
               details="A Farm Ecommerce website "
               stack="React js || Tailwind "
               link="https://whfarms.vercel.app"
-            />
+            /> */}
 
             <Pitem
               image={require("../assets/news.png")}
@@ -60,6 +60,13 @@ function Project() {
               details=" An Ecommerce Website"
               stack="React js || Tailwind || React Reveal"
               link="https://audiophile-ney.vercel.app"
+            />
+            <Pitem
+              image={require("../assets/cocktail.png")}
+              title="Cocktail"
+              details="A cocktail website using the cocktail db ap1 "
+              stack="React js || Tailwind "
+              link="https://cocktail-ney.vercel.app"
             />
             <Pitem
               image={require("../assets/furniture.png")}
