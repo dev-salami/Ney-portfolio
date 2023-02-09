@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 import Shared from "./shared";
 import HTML from "../assets/html.png";
 import css from "../assets/css.png";
-import sass from "../assets/sass.png";
 import tailwind from "../assets/tailwind.png";
 import javascript from "../assets/javascript.png";
 import react from "../assets/react.png";
-import github from "../assets/github.png";
-import firebase from "../assets/firebase.png";
+import Mongo from "../assets/mongo.svg";
+import Node from "../assets/node.svg";
+import Express from "../assets/express.svg";
 import { useContext } from "react";
 
 import DataContext from "../context/DataContext";
@@ -51,10 +51,7 @@ function Stack() {
               <img className="w-20 mx-auto" src={css} alt="css logo" />
               <p className="my-4">CSS</p>
             </div>
-            <div className="shadow-md max-w-[200px] pt-4 bg-gray-700 max-h-[200px] shadow-[#040c16] hover:scale-110 duration-500">
-              <img className="w-20 mx-auto" src={sass} alt="sass logo" />
-              <p className="my-4">SASS</p>
-            </div>
+
             <div className="shadow-md max-w-[200px] pt-4 bg-gray-700 max-h-[200px] shadow-[#040c16] hover:scale-110 duration-500">
               <img
                 className="w-20 mx-auto"
@@ -76,16 +73,16 @@ function Stack() {
               <p className="my-4">REACT JS</p>
             </div>
             <div className="shadow-md max-w-[200px] pt-4 bg-gray-700 max-h-[200px] shadow-[#040c16] hover:scale-110 duration-500">
-              <img className="w-20 mx-auto" src={github} alt="github logo" />
-              <p className="my-4">GITHUB</p>
+              <img className="w-20 mx-auto" src={Mongo} alt="mongo logo" />
+              <p className="my-4">MONGO DB</p>
             </div>
             <div className="shadow-md max-w-[200px] pt-4 bg-gray-700 max-h-[200px] shadow-[#040c16] hover:scale-110 duration-500">
-              <img
-                className="w-20 mx-auto"
-                src={firebase}
-                alt="firebase logo"
-              />
-              <p className="my-4">FIREBASE</p>
+              <img className="w-20 mx-auto" src={Express} alt="express logo" />
+              <p className="my-4">EXPRESS JS</p>
+            </div>
+            <div className="shadow-md max-w-[200px] pt-4 bg-gray-700 max-h-[200px] shadow-[#040c16] hover:scale-110 duration-500">
+              <img className="w-20 mx-auto" src={Node} alt="node logo" />
+              <p className="my-4">NODE JS</p>
             </div>
           </div>
         </div>

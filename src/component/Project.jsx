@@ -19,6 +19,20 @@ function Project() {
         <div className="container mx-auto flex justify-center pb-20">
           <div className="lg:grid-cols-2 grid-cols-1 grid lg:gap-4 gap-16 w-fit  items-center text ">
             <Pitem
+              image={require("../assets/artsy.png")}
+              title="Artsy"
+              details=" Arsty is a site for vintage shots, historic images and captures seamlessly in one place."
+              stack="React js || Tailwind || Aos || PayStack"
+              link="https://arty.vercel.app"
+            />
+            <Pitem
+              image={require("../assets/port-image.png")}
+              title="Portfolio"
+              details=" This is my Personal Portfolio"
+              stack="React js || Tailwind || Framer Motion"
+              link="https://salami.ng"
+            />
+            <Pitem
               image={require("../assets/planet.png")}
               title="Planet Facts"
               details=" Fact site for all planets in our solar system."
@@ -68,20 +82,20 @@ function Project() {
               stack="React js || Tailwind "
               link="https://cocktail-ney.vercel.app"
             />
-            <Pitem
+            {/* <Pitem
               image={require("../assets/furniture.png")}
               title="Furniture Store"
               details=" A Website for a furniture store"
               stack="React || Tailwind"
               link="https://ney-furniture.vercel.app"
-            />
-            <Pitem
+            /> */}
+            {/* <Pitem
               image={require("../assets/graphics-resume.png")}
               title="Portfolio"
               details=" A portfolio for a graphics designer."
               stack="Html || Sass || javascript"
               link="https://froshgraphics.netlify.app"
-            />
+            /> */}
           </div>
         </div>
       </div>
